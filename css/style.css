@@ -1,0 +1,143 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 2.5em;
+    color: #3498db;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.semester-box {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(15px);
+}
+
+.semester-box:hover {
+    background-color: #2980b9;
+}
+
+.mode-switch {
+    margin-top: 20px;
+    position: relative;
+    flex-wrap: nowrap;
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    position: relative;
+    width: 50px;
+    height: 20px;
+    display: block;
+    background: #d9d9d9;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.3), inset 0px -5px 15px rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background: #f2f2f2;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.5s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+input:checked ~ label:after {
+    left: 30px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+input:checked ~ label {
+    background: #242424;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+input:checked + label + .background {
+    background: #242424;
+}
+
+.semester-box {
+    /* Your existing styles for semester box */
+    position: relative;
+}
+
+.download-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #fff; /* Adjust as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust as needed */
+}
+
+.semester-box:hover .download-links {
+    display: block;
+}
+
+.download-links li {
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, cursor 0.3s ease;
+}
+
+.download-links li:hover {
+    background-color: #3498db; /* Adjust as needed */
+    color: #fff; /* Adjust as needed */
+    cursor: pointer;
+}
+
+.mode{
+    text-align: center;
+}
