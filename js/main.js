@@ -1,9 +1,9 @@
 function navigateToSemester(semesterNumber) {
-    window.location.href = `../semesters/semester${semesterNumber}.html`;
+    window.location.href = `RCOEMXam/semesters/semester${semesterNumber}.html`;
 }
 
 function navigateToExam(examType) {
-    window.location.href = `../exams/${examType}.html`;
+    window.location.href = `RCOEMXam/exams/${examType}.html`;
 }
 function toggleDarkMode() {
     const checkbox = document.getElementById('dark-mode');
